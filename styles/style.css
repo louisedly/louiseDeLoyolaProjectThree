@@ -234,3 +234,19 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+header {
+  background-color: #284B63;
+}
+
+html {
+  font-style: "Roboto", sans-serif;
+  font-size: 62.5%;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 90%;
+}
