@@ -26,23 +26,6 @@ header p {
     font-family: $baseFont;
 }
 
-.header a,
-.results a,
-footer a, 
-.nextContainer input {
-    color: $primaryColor;
-    background-color: $buttonColor;
-    display: block;
-    width: 30%;
-    text-decoration: none;
-    text-align: center;
-    font-size: 4rem;
-    border-radius: 15px;
-    box-shadow: 10px 10px 0 0 #53354A;
-    margin: 0 auto;
-    font-family: $headerFont;
-}
-
 .headerImageContainer {
     display: flex;
     justify-content: center;
@@ -56,9 +39,26 @@ footer a,
     height: 100px;
 }
 
-
 @keyframes handUp {
     from {top: 90px;}
     to {top: 30px;}
+}
+
+// Buttons
+.header a,
+.results a,
+footer a, 
+.nextContainer input {
+    color: $primaryColor;
+    background-color: $buttonColor;
+    display: block;
+    width: 20%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0 0 #53354A;
+    margin: 0 auto;
+    font-family: $headerFont;
 }
 

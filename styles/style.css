@@ -265,24 +265,6 @@ header p {
   font-family: "Arvo", serif;
 }
 
-.header a,
-.results a,
-footer a,
-.nextContainer input {
-  color: #FFFFFF;
-  background-color: #903749;
-  display: block;
-  width: 30%;
-  text-decoration: none;
-  text-align: center;
-  font-size: 4rem;
-  border-radius: 15px;
-  -webkit-box-shadow: 10px 10px 0 0 #53354A;
-          box-shadow: 10px 10px 0 0 #53354A;
-  margin: 0 auto;
-  font-family: "Creepster", cursive;
-}
-
 .headerImageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,6 +301,24 @@ footer a,
   to {
     top: 30px;
   }
+}
+
+.header a,
+.results a,
+footer a,
+.nextContainer input {
+  color: #FFFFFF;
+  background-color: #903749;
+  display: block;
+  width: 20%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 3rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 0 0 #53354A;
+          box-shadow: 10px 10px 0 0 #53354A;
+  margin: 0 auto;
+  font-family: "Creepster", cursive;
 }
 
 .wrapper {
@@ -363,8 +363,8 @@ form {
   background-image: url(../assets/noun_Zombie_876167.png);
   background-size: 20%;
   background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 115%;
+  background-position-x: 100%;
+  background-position-y: 110%;
 }
 
 .firstQuestion,
@@ -372,14 +372,14 @@ form {
   background-color: #BAE8E8;
   color: #000000;
   padding: 10px 40px;
-  height: 100vh;
+  height: auto;
 }
 
 .secondQuestion,
 .results {
   background-color: #272343;
   padding: 20px 40px;
-  height: 100vh;
+  height: auto;
 }
 
 .imageContainer {
@@ -394,7 +394,7 @@ form {
 }
 
 .imageContainer li {
-  padding: 40px 10px;
+  padding: 40px 30px;
   list-style: none;
 }
 
@@ -409,7 +409,7 @@ form {
 }
 
 .nextContainer {
-  padding-top: 50px;
+  padding: 40px 0;
 }
 
 label {
@@ -434,4 +434,122 @@ footer {
   padding: 5px;
   text-align: center;
   color: #000000;
+}
+
+@media (max-width: 1280px) {
+  .secondQuestion img {
+    width: 300px;
+    height: 250px;
+    display: block;
+  }
+}
+
+@media (max-width: 1120px) {
+  html {
+    font-size: 60%;
+  }
+  .results a {
+    width: 30%;
+  }
+  .results {
+    padding: 100px;
+  }
+  .secondQuestion img {
+    width: 200px;
+    height: 150px;
+    display: block;
+  }
+}
+
+@media (max-width: 928px) {
+  html {
+    font-size: 50%;
+  }
+  .header a,
+  footer a,
+  .nextContainer input {
+    width: 30%;
+  }
+}
+
+@media (max-width: 787px) {
+  .imageContainer li {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 741px) {
+  .results a {
+    width: 50%;
+  }
+}
+
+@media (max-width: 703px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 687px) {
+  .wrapper {
+    width: 90%;
+  }
+  .imageContainer li {
+    width: calc(100% / 2)-10px;
+    padding: 10px;
+  }
+  .firstQuestion,
+  .thirdQuestion {
+    background-image: none;
+  }
+}
+
+@media (max-width: 599px) {
+  html {
+    font-size: 40%;
+  }
+  .headerImageContainer {
+    display: none;
+  }
+  .results a {
+    width: 100%;
+  }
+  .header a,
+  footer a,
+  .nextContainer input {
+    width: 40%;
+  }
+}
+
+@media (max-width: 464px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 356px) {
+  html {
+    font-size: 38%;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    width: 95%;
+  }
+  html {
+    font-size: 35%;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  .secondQuestion {
+    padding: 10px;
+  }
+  .results {
+    padding: 100px 50px;
+  }
+  .imageContainer {
+    padding: 0;
+  }
 }
