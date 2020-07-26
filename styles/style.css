@@ -236,17 +236,164 @@ html {
 }
 
 header {
-  background-color: #284B63;
+  background-color: #272343;
+  font-family: "Creepster", cursive;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-html {
-  font-style: "Roboto", sans-serif;
-  font-size: 62.5%;
+h1 {
+  text-align: center;
+  font-size: 8.5rem;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+h1 span {
+  display: block;
+  font-size: 10rem;
+}
+
+header p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Arvo", serif;
+}
+
+.header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+.header h3 {
   color: #FFFFFF;
+  background-color: #903749;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 50px;
+  font-size: 4.5rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 0 0 #53354A;
+          box-shadow: 10px 10px 0 0 #53354A;
+}
+
+.headerImageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  -webkit-animation-name: handUp;
+          animation-name: handUp;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 100px;
+  height: 100px;
+}
+
+@-webkit-keyframes handUp {
+  from {
+    top: 90px;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+@keyframes handUp {
+  from {
+    top: 90px;
+  }
+  to {
+    top: 30px;
+  }
 }
 
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
+}
+
+html {
+  font-family: "Arvo", serif;
+  font-size: 62.5%;
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
+body {
+  font-size: 2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.firstQuestion,
+.thirdQuestion {
+  background-color: #BAE8E8;
+  color: #000000;
+  padding: 60px;
+}
+
+.secondQuestion {
+  background-color: #272343;
+  padding: 60px;
+}
+
+.imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.imageContainer li {
+  width: calc(100%/2)-10px;
+  padding: 20px;
+  list-style: none;
+}
+
+.secondQuestion img {
+  width: 300px;
+  height: 250px;
+  display: block;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+}
+
+input[type=radio] {
+  margin-right: 20px;
+}
+
+footer {
+  background-color: #272343;
+  padding: 20px;
+  text-align: center;
 }

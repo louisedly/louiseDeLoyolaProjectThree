@@ -1,15 +1,61 @@
-html {
-    font-style: $baseFont;
-    font-size: 62.5%;
-    color: $primaryColor;
-}
-
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
 }
 
-h2 {
-    
+html {
+    font-family: $baseFont;
+    font-size: 62.5%;
+    color: $primaryColor;
+    line-height: 1.6;
+}
+
+body {
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.firstQuestion,
+.thirdQuestion {
+    background-color: $secondaryBackgroundColor;
+    color: $secondaryColor;
+    padding: 60px;
+}
+
+.secondQuestion {
+    background-color: $primaryBackgroundColor;
+    padding: 60px;
+}
+
+.imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageContainer li {
+    width: calc(100%/2) - 10px;
+    padding: 20px;
+    list-style: none;
+}
+
+.secondQuestion img {
+    width: 300px;
+    height: 250px;
+    display: block;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+}
+
+
+input[type=radio] {
+	margin-right: 20px;
 }

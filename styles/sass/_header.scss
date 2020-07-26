@@ -2,4 +2,63 @@
 
 header {
     background-color: $primaryBackgroundColor;
+    font-family: $headerFont;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+h1 {
+    text-align: center;
+    font-size: 8.5rem;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1 span {
+    display: block;
+    font-size: 10rem;
+}
+
+header p {
+    text-align: center;
+    font-size: 2rem;
+    font-family: $baseFont;
+}
+
+.header a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header h3 {
+    color: $primaryColor;
+    background-color: $buttonColor;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 50px;
+    font-size: 4.5rem;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0 0 #53354A;
+}
+
+.headerImageContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    animation-name: handUp;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+    width: 100px;
+    height: 100px;
+}
+
+
+@keyframes handUp {
+    from {top: 90px;}
+    to {top: 30px;}
+}
+

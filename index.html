@@ -3,51 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>Zombie Quiz</title>
 </head>
 <body>
     <!-- start of header -->
     <header>
-        <h1>Will you survive a <span>Zombie Apocalypse?</span></h1>
-        <p>Take this quiz to find out if you survive or turn into a brain eater.</p>
+        <div class="header wrapper">
+            <h1>Will you survive a <span>Zombie Apocalypse?</span></h1>
+            <p>Take this quiz to find out if you survive or turn into a brain eater.</p>
+            <div class="headerImageContainer">
+                <img src="assets/noun_Zombie_152244.png" alt="Zombie by NAS from the Noun Project">
+            </div>
+            <a class="buttonStart" href="">
+                <h3>Start</h3>
+            </a>
+        </div>
     </header>
     <!-- end of header -->
 
     <!-- start of main -->
     <main>
         <!-- <div> -->
-        <section>
         <form action="">
-            <fieldset class="">
-                <h2></h2>
-                <label for=""></label>
-                <input type="radio" name="" id="" value="">
-                <label for=""></label>
-                <input type="radio" name="" id="" value="">
+            <fieldset class="firstQuestion">
+                <div class="wrapper">
+                    <h2>The alarms are sounding! The zombie apocalypse has begun. What's your tactic?</h2>
+                    <label><input type="radio" name="tactic" id="survive" value="1">RUUUNNNN!</label>
+                    <label><input type="radio" name="tactic" id="die" value="2">Give up and cry yourself to sleep. What's the point? We're all going to die anyway.</label>
+                    <label><input type="radio" name="tactic" id="turn" value="3">Find a hiding spot with ample food source and barricade yourself.</label>
+                    <label><input type="radio" name="tactic" id="cure" value="4">Help find a cure.</label>
+                </div>
             </fieldset>
 
-            <fieldset class="">
-                <h2></h2>
-                <label for=""></label>
-                <input type="radio" name="" id="" value="">
-                <label for=""></label>
-                <input type="radio" name="" id="" value="">
+            <fieldset class="secondQuestion">
+                <h2 class="wrapper">Someone's knocking at the door. Quick, grab a weapon!</h2>
+                <ul class="imageContainer wrapper">
+                    <li>
+                    <input type="radio" name="weapon" id="" value="1">
+                    <label><img src="assets/sword.jpg" alt="Photo of sword by Ricardo Cruz on Unsplash">Sword</label>
+                    </li>
+                    <li>
+                    <input type="radio" name="weapon" id="" value="2">
+                    <label><img src="assets/baseballBats.jpg" alt="Photo of baseball bats by NeONBRAND on Unsplash">Baseball Bat</label>
+                    </li>
+                    <li>
+                    <input type="radio" name="weapon" id="" value="3">
+                    <label><img src="assets/shotgun.jpg" alt="Photo of shotgun by William Isted on Unsplash">Shotgun</label>
+                    </li>
+                    <li>
+                    <input type="radio" name="weapon" id="" value="4">
+                    <label><img src="assets/bareHands.jpg" alt="Photo of man punching by Quinn Buffing on Unsplash">Bare Hands</label>
+                    </li>
+                </ul>
             </fieldset>
 
-            <fieldset class="price">
-                <h2></h2>
-                <label for="expensive">$$</label>
-                <input type="radio" name="price" id="expensive" value="$$">
-                <label for="cheap">$</label>
-                <input type="radio" name="price" id="cheap" value="$">
-                <div class="submit-container">
-                    <input type="submit" value="Get me a treat!">
+            <fieldset class="thirdQuestion">
+                <div class="wrapper">
+                    <h2>You encounter a zombie on your way out. It's the reanimated corpse of your close friend. What do you do?</h2>
+                    <label><input type="radio" name="zombie" id="" value="1">Shoot them in the head. It's merciful that way.</label>
+                    <label><input type="radio" name="zombie" id="" value="2">RUUUNNN!</label>
+                    <label><input type="radio" name="zombie" id="" value="3">Let it bite you and be zombies together. Brainzz.</label>
+                    <label><input type="radio" name="zombie" id="" value="4">Just stand there paralyzed in shock and get eaten.</label>
+                    <div class="submitContainer">
+                        <input type="submit" value="Get me a treat!">
+                    </div>
                 </div>
             </fieldset>
         </form>
-        </section>
         <!-- </div> -->
 
         <section class="results">
@@ -58,7 +83,7 @@
 
     <!-- start of footer -->
     <footer>
-
+        <p>© Created by Louise de Loyola 2020<p>
     </footer>
     <!-- end of footer -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
