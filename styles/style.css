@@ -265,26 +265,22 @@ header p {
   font-family: "Arvo", serif;
 }
 
-.header a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-decoration: none;
-}
-
-.header h3 {
+.header a,
+.results a,
+footer a,
+.nextContainer input {
   color: #FFFFFF;
   background-color: #903749;
-  display: inline-block;
+  display: block;
+  width: 30%;
+  text-decoration: none;
   text-align: center;
-  padding: 5px 50px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   border-radius: 15px;
   -webkit-box-shadow: 10px 10px 0 0 #53354A;
           box-shadow: 10px 10px 0 0 #53354A;
+  margin: 0 auto;
+  font-family: "Creepster", cursive;
 }
 
 .headerImageContainer {
@@ -339,7 +335,11 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 5rem;
 }
 
 form {
@@ -351,16 +351,35 @@ form {
   width: 100%;
 }
 
+.firstQuestion {
+  background-image: url(../assets/noun_Zombie_876175.png);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position-x: 105%;
+  background-position-y: 110%;
+}
+
+.thirdQuestion {
+  background-image: url(../assets/noun_Zombie_876167.png);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-position-y: 115%;
+}
+
 .firstQuestion,
 .thirdQuestion {
   background-color: #BAE8E8;
   color: #000000;
-  padding: 60px;
+  padding: 10px 40px;
+  height: 100vh;
 }
 
-.secondQuestion {
+.secondQuestion,
+.results {
   background-color: #272343;
-  padding: 60px;
+  padding: 20px 40px;
+  height: 100vh;
 }
 
 .imageContainer {
@@ -369,18 +388,28 @@ form {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .imageContainer li {
-  width: calc(100%/2)-10px;
-  padding: 20px;
+  padding: 40px 10px;
   list-style: none;
 }
 
 .secondQuestion img {
-  width: 300px;
-  height: 250px;
+  width: 200px;
+  height: 150px;
   display: block;
+}
+
+.nextContainer input {
+  padding: 10px;
+}
+
+.nextContainer {
+  padding-top: 50px;
 }
 
 label {
@@ -392,8 +421,17 @@ input[type=radio] {
   margin-right: 20px;
 }
 
+input {
+  text-decoration: none;
+}
+
+.results {
+  padding-top: 200px;
+}
+
 footer {
-  background-color: #272343;
-  padding: 20px;
+  background-color: #BAE8E8;
+  padding: 5px;
   text-align: center;
+  color: #000000;
 }

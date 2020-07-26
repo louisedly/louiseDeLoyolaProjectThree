@@ -26,21 +26,21 @@ header p {
     font-family: $baseFont;
 }
 
-.header a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.header h3 {
+.header a,
+.results a,
+footer a, 
+.nextContainer input {
     color: $primaryColor;
     background-color: $buttonColor;
-    display: inline-block;
+    display: block;
+    width: 30%;
+    text-decoration: none;
     text-align: center;
-    padding: 5px 50px;
-    font-size: 4.5rem;
+    font-size: 4rem;
     border-radius: 15px;
     box-shadow: 10px 10px 0 0 #53354A;
+    margin: 0 auto;
+    font-family: $headerFont;
 }
 
 .headerImageContainer {
