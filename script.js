@@ -26,6 +26,7 @@ $(function () {
         } else if (total >= 12) {
             finalChoice.push('You found the cure! Venture philanthropy, society relief, milestones, mass incarceration social capital. Contextualize thought leadership, shine transparent, social innovation we must stand up.')
         } else {
+            // if the user doesn't click any radio buttons
             $('.prompt').text('Please complete all questions before checking your results!');
         };
 
@@ -33,9 +34,6 @@ $(function () {
 
 		// Populates the page with result
         $('.results').html(`<h2 class="final">${finalChoice}</h2>`);
-        
-        const scroll = $(this).closest(".section").next().offset().top;
-        $("html, body").animate({ scrollTop: scroll }, "slow");
     });
 
     // Refreshes page and radio buttons and scrolls back to top
