@@ -3,31 +3,27 @@ $(function () {
     // Add an event listener for the submit button
     $('form').on('submit', function(e) {
         e.preventDefault();
-        
-    const questionOne = $('input[name=tactic]:checked').val();
-    const questionTwo = $('input[name=weapon]:checked').val();
-    const questionThree = $('input[name=zombieFriend]:checked').val();
 
+        // *1 converts variable into a number instead of concatenating
+        const tactic = $('input[name=tactic]:checked').val()*1;
+        const weapon = $('input[name=weapon]:checked').val()*1;
+        const zombieFriend = $('input[name=zombieFriend]:checked').val()*1;
 
-    let score = 2;
+        const total = (tactic + weapon + zombieFriend);
 
-        if (questionOne == "survive"){score++};
-        if (questionTwo == "survive"){score++};
-        if (questionThree == "survive"){score++};
-
-        console.log(score);
+        console.log(total);
 
 		// Use the user's choice to find a result
 		// Run through an if statement
         const finalChoice = [];
 
-        if (score >= 5) {
-            finalChoice.push('You survived! Congratulations, with your survival skills you have managed to triumph against the brain eaters. Now you are the only human being alive left on earth. ')
-        } else if (score === 4 || score === 3) {
+        if (total < 4) {
+            finalChoice.push('You survived! Congratulations, with your survival skills you have managed to triumph against the brain eaters. Unfortunately, you are now the only human being left alive on earth.')
+        } else if (total >= 4 && total < 7) {
             finalChoice.push('Sorry, you died!')
-        } else if (score === 2) {
+        } else if (total >= 7 && total < 12) {
             finalChoice.push('Oh no, you turned into a Zombie! Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris.')
-        } else if (score === 1) {
+        } else if (total >= 12) {
             finalChoice.push('You found the cure! Venture philanthropy, society relief, milestones, mass incarceration social capital. Contextualize thought leadership, shine transparent, social innovation we must stand up.')
         } else {
             $('.prompt').text('Please complete all questions before checking your results!');
@@ -37,6 +33,9 @@ $(function () {
 
 		// Populates the page with result
         $('.results').html(`<h2 class="final">${finalChoice}</h2>`);
+        
+        const scroll = $(this).closest(".section").next().offset().top;
+        $("html, body").animate({ scrollTop: scroll }, "slow");
     });
 
     // Refreshes page and radio buttons and scrolls back to top
