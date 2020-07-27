@@ -39,6 +39,11 @@ header p {
     height: 100px;
 }
 
+.headerImageContainer img {
+    width: 100px;
+    height: 100px;
+}
+
 @keyframes handUp {
     from {top: 90px;}
     to {top: 30px;}
