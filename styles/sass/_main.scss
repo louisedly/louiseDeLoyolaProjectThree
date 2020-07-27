@@ -49,14 +49,19 @@ form {
     background-color: $secondaryBackgroundColor;
     color: $secondaryColor;
     padding: 10px 40px;
+    height: 100vh;
+}
+
+.secondQuestion {
+    background-color: $primaryBackgroundColor;
+    padding: 50px 40px;
     height: auto;
 }
 
-.secondQuestion,
 .results {
     background-color: $primaryBackgroundColor;
     padding: 20px 40px;
-    height: auto;
+    height: 100vh;
 }
 
 .imageContainer {
@@ -77,11 +82,11 @@ form {
 }
 
 // Button
-.nextContainer input {
+.nextButton h3 {
     padding: 10px;
 }
 
-.nextContainer {
+.nextButton {
     padding: 40px 0;
 }
 
@@ -99,6 +104,10 @@ input {
     text-decoration: none;
 }
 
-.results {
-    padding-top: 200px;
+.resultsFinal {
+    padding-top: 20px;
+}
+
+.resultsFinal input {
+    padding: 10px;
 }

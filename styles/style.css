@@ -238,7 +238,7 @@ html {
 header {
   background-color: #272343;
   font-family: "Creepster", cursive;
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,9 +304,9 @@ header p {
 }
 
 .header a,
-.results a,
+.resultsFinal input,
 footer a,
-.nextContainer input {
+.nextButton h3 {
   color: #FFFFFF;
   background-color: #903749;
   display: block;
@@ -372,14 +372,19 @@ form {
   background-color: #BAE8E8;
   color: #000000;
   padding: 10px 40px;
+  height: 100vh;
+}
+
+.secondQuestion {
+  background-color: #272343;
+  padding: 50px 40px;
   height: auto;
 }
 
-.secondQuestion,
 .results {
   background-color: #272343;
   padding: 20px 40px;
-  height: auto;
+  height: 100vh;
 }
 
 .imageContainer {
@@ -404,11 +409,11 @@ form {
   display: block;
 }
 
-.nextContainer input {
+.nextButton h3 {
   padding: 10px;
 }
 
-.nextContainer {
+.nextButton {
   padding: 40px 0;
 }
 
@@ -425,22 +430,24 @@ input {
   text-decoration: none;
 }
 
-.results {
-  padding-top: 200px;
+.resultsFinal {
+  padding-top: 20px;
+}
+
+.resultsFinal input {
+  padding: 10px;
 }
 
 footer {
   background-color: #BAE8E8;
-  padding: 5px;
+  padding: 20px 5px 5px 0;
   text-align: center;
   color: #000000;
 }
 
 @media (max-width: 1280px) {
-  .secondQuestion img {
-    width: 300px;
-    height: 250px;
-    display: block;
+  .secondQuestion li {
+    padding: 40px 10px;
   }
 }
 
@@ -448,7 +455,7 @@ footer {
   html {
     font-size: 60%;
   }
-  .results a {
+  .resultsFinal input {
     width: 30%;
   }
   .results {
@@ -467,7 +474,7 @@ footer {
   }
   .header a,
   footer a,
-  .nextContainer input {
+  .nextButton h3 {
     width: 30%;
   }
 }
@@ -479,7 +486,7 @@ footer {
 }
 
 @media (max-width: 741px) {
-  .results a {
+  .resultsFinal input {
     width: 50%;
   }
 }
@@ -511,12 +518,12 @@ footer {
   .headerImageContainer {
     display: none;
   }
-  .results a {
-    width: 100%;
+  .resultsFinal input {
+    width: 80%;
   }
   .header a,
   footer a,
-  .nextContainer input {
+  .nextButton h3 {
     width: 40%;
   }
 }

@@ -11,13 +11,13 @@
 <body>
     <!-- start of header -->
     <header>
-        <div class="header wrapper">
+        <div id="start" class="header wrapper">
             <h1>Will you survive a <span>Zombie Apocalypse?</span></h1>
             <p>Take this quiz to find out if you survive or turn into a brain eater.</p>
             <div class="headerImageContainer">
                 <img src="assets/noun_Zombie_152244.png" alt="Zombie by NAS from the Noun Project">
             </div>
-            <a class="buttonStart" href="">
+            <a class="buttonStart" href="#quizStart">
                 <h3>Start</h3>
             </a>
         </div>
@@ -26,69 +26,67 @@
 
     <!-- start of main -->
     <main>
-        <!-- <div> -->
         <form action="">
-            <fieldset class="firstQuestion">
-                <div class="wrapper">
-                    <h2>The alarms are sounding! The zombie apocalypse has begun. What's your tactic?</h2>
-                    <label><input type="radio" name="tactic" id="survive" value="1">RUUUNNNN!</label>
-                    <label><input type="radio" name="tactic" id="die" value="2">Give up and cry. What's the point? We're all going to die anyway.</label>
-                    <label><input type="radio" name="tactic" id="turn" value="3">Find a hiding spot with ample food source and barricade yourself.</label>
-                    <label><input type="radio" name="tactic" id="cure" value="4">Help find a cure.</label>
-                    <div class="nextContainer">
-                        <input type="submit" value="next">
+            <div id="quizStart" >
+                <fieldset id="questionOne" class="firstQuestion">
+                    <div class="wrapper">
+                        <h2>The alarms are sounding! The zombie apocalypse has begun. What's your tactic?</h2>
+                        <label for="survive"><input type="radio" name="tactic" id="survive" value="survive">RUUUNNNN!</label>
+                        <label for="die"><input type="radio" name="tactic" id="die" value="die">Give up and cry. What's the point? We're all going to die anyway.</label>
+                        <label for="turn"><input type="radio" name="tactic" id="turn" value="turn">Find a hiding spot, collect food and barricade yourself.</label>
+                        <label for="cure"><input type="radio" name="tactic" id="cure" value="cure">Help find a cure.</label>
+
+                        <a class="nextButton" href="#questionTwo">
+                            <h3>Next</h3>
+                        </a>
                     </div>
                 </div>
             </fieldset>
 
-            <fieldset class="secondQuestion">
+            <fieldset id="questionTwo"class="secondQuestion">
                 <h2 class="wrapper">Someone's knocking at the door. Quick, grab a weapon!</h2>
                 <ul class="imageContainer wrapper">
                     <li>
-                        <label><img src="assets/sword.jpg" alt="Photo of sword by Ricardo Cruz on Unsplash"><input type="radio" name="weapon" id="" value="1">Sword</label>
+                        <label for="survive"><img src="assets/sword.jpg" alt="Photo of sword by Ricardo Cruz on Unsplash"><input type="radio" name="weapon" id="survive" value="survive">Sword</label>
                     </li>
                     <li>
-                        <label><img src="assets/baseballBats.jpg" alt="Photo of baseball bats by NeONBRAND on Unsplash"><input type="radio" name="weapon" id="" value="2">Baseball Bat</label>
+                        <label for="die"><img src="assets/baseballBats.jpg" alt="Photo of baseball bats by NeONBRAND on Unsplash"><input type="radio" name="weapon" id="die" value="die">Baseball Bat</label>
                     </li>
                     <li>
-                        <label><img src="assets/shotgun.jpg" alt="Photo of shotgun by William Isted on Unsplash"><input type="radio" name="weapon" id="" value="3">Shotgun</label>
+                        <label for="turn"><img src="assets/shotgun.jpg" alt="Photo of shotgun by William Isted on Unsplash"><input type="radio" name="weapon" id="turn" value="turn">Shotgun</label>
                     </li>
                     <li>
-                        <label><img src="assets/bareHands.jpg" alt="Photo of man punching by Quinn Buffing on Unsplash"><input type="radio" name="weapon" id="" value="4">Bare Hands</label>
+                        <label for="cure"><img src="assets/bareHands.jpg" alt="Photo of man punching by Quinn Buffing on Unsplash"><input type="radio" name="weapon" id="cure" value="cure">Bare Hands</label>
                     </li>
                 </ul>
-                <div class="nextContainer">
-                    <input type="submit" value="Next">
-                </div>
+
+                <a class="nextButton" href="#questionThree">
+                    <h3>Next</h3>
+                </a>
             </fieldset>
 
-            <fieldset class="thirdQuestion">
+            <fieldset id="questionThree" class="thirdQuestion">
                 <div class="wrapper">
                     <h2>You encounter a zombie on your way out. It's a reanimated corpse of your close friend. What do you do?</h2>
-                    <label><input type="radio" name="zombie" id="" value="1">Shoot them in the head. It's merciful that way.</label>
-                    <label><input type="radio" name="zombie" id="" value="2">RUUUNNN!</label>
-                    <label><input type="radio" name="zombie" id="" value="3">Let it bite you and be zombies together. Brainzz.</label>
-                    <label><input type="radio" name="zombie" id="" value="4">Just stand there paralyzed in shock and get eaten.</label>
-                    <div class="nextContainer">
-                        <input type="submit" value="Next">
+                    <label for="survive"><input type="radio" name="zombie" id="survive" value="survive">Shoot them in the head. It's merciful that way.</label>
+                    <label for="die"><input type="radio" name="zombie" id="die" value="die">RUUUNNN!</label>
+                    <label for="turn"><input type="radio" name="zombie" id="turn" value="turn">Let it bite you and be zombies together. Brainzz.</label>
+                    <label for="cure"><input type="radio" name="zombie" id="cure" value="cure">Just stand there paralyzed in shock and get eaten.</label>
+                    
+                    <div class="resultsFinal">
+                        <input type="submit" value="See my Results">
                     </div>
                 </div>
             </fieldset>
         </form>
-        <!-- </div> -->
-
-        <section class="results">
-            <a class="buttonResults" href="">
-                <h3>See my Results</h3>
-            </a>
+        <section id="results" class="results">
         </section>
-
     </main>
     <!-- end of main -->
 
     <!-- start of footer -->
     <footer>
-        <a class="tryAgain" href="">
+        <a class="startButton" href="#start"
             <h3>Try Again!</h3>
         </a>
         <p>© Created by Louise de Loyola 2020<p>
