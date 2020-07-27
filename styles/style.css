@@ -384,7 +384,7 @@ form {
 .results {
   background-color: #272343;
   padding: 20px 40px;
-  height: 100vh;
+  height: auto;
 }
 
 .imageContainer {
@@ -436,6 +436,15 @@ input {
 
 .resultsFinal input {
   padding: 10px;
+}
+
+.prompt {
+  text-align: center;
+  color: #903749;
+}
+
+.results h2 {
+  text-align: center;
 }
 
 footer {
